@@ -4,6 +4,7 @@ const btnCovert = document.getElementById('btnConvert')
 
 async function copyToRem() {
     if (btnCovert.textContent === 'Copy') {
+        btnCovert.style.backgroundColor = '#4de212';
         btnCovert.textContent = 'Copied'
         try {
             await navigator.clipboard.writeText(res.textContent);
@@ -26,6 +27,7 @@ input.addEventListener('keydown', function (ev) {
 })
 
 input.addEventListener('focus', () => {
+    btnCovert.style.backgroundColor = '#EF3F21'
     btnCovert.textContent = "CONVERTER"
 })
 
